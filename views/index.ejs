@@ -1,0 +1,32 @@
+<%- include("partials/header"); -%>
+
+   <div class="container">
+	   
+	          <!-- some spacing in here -->
+	          <br><br>
+		   
+	          <!-- blog card -->
+	          <%for(var i = 0; i < blogs.length; i++) {%>
+		           <div class="row mb-2 no-gutters justify-content-center">
+				  
+					<div class="col-md-2 pb-5">
+					  <img src="<%=blogs[i]["image"]%>" class="card-img" alt="...">
+					</div>
+
+					<div class="col-md-5">
+					  <div class="card-body">
+						<h5 class="card-title"><%=blogs[i]["title"]%></h5>
+						<p class="card-text"><%=blogs[i]["body"].substring(0, 100)%></p>
+						<p class="card-text"><small class="text-muted">April 2020 · 2 min read</small></p>
+						 <a class="index-read-more" href="/blogs/<%=blogs[i]["_id"]%>">Read more</a>
+					  </div>
+					</div>
+				  </div>				
+
+	            <%}%>
+	   
+			   
+	   </div>
+	   
+
+<%- include("partials/footer"); -%>

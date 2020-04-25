@@ -1,0 +1,39 @@
+
+/* header */
+.h-padding {
+	padding-left: 100px;
+}
+
+.h-brand {
+	font-size: 1.7rem;
+}
+
+.h-link {
+	font-size: 1.2rem;
+}
+
+
+
+/* index */
+.index-read-more {
+	display: block;
+	background-color: #f2f4fb;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+
+
+
+/* new */
+.new-margin {
+	margin-top: 50px;
+}
+
+
+
+/* show */
+.show-form {
+	display: inline-block;
+}
+

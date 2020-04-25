@@ -1,0 +1,31 @@
+<%- include("partials/header"); -%>
+
+   <div class="container">
+	   
+	   <div class="card mt-5 mr-auto ml-auto" style="max-width: 540px;">
+		  <div class="row no-gutters">
+			<div class="col-md-4">
+			  <img src="<%=blog["image"]%>" class="card-img" alt="coding-image">
+			</div>
+			<div class="col-md-8">
+			  <div class="card-body">
+				<h5 class="card-title"><%=blog["title"]%></h5>
+				<p class="card-text"><%=blog["body"]%></p>
+				<p class="card-text"><small class="text-muted">April 2020 · 2 min read</small></p> 
+				 
+				 <!--Edit and Delete-->
+				<a class="btn btn-outline-info" href="/blogs/<%=blog["_id"]%>/edit">Edit</a>
+				<form class="show-form" action="/blogs/<%=blog["_id"]%>?_method=delete" method="post">
+					<button class="btn btn-outline-danger" type="submit">Delete</button>
+				</form> 
+			  </div>
+			</div>
+		  </div>
+		</div>
+	   
+	   
+</div>
+
+
+
+<%- include("partials/footer"); -%>

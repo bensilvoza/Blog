@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+
+	 <div class="container">
+		 <div class="row">
+			 <div class="col-md-5 m-auto">
+				 <h2 class="new-margin">Edit blog</h2>
+				   <form action="/blogs/<%=blog["_id"]%>?_method=put" method="post">
+					 <div class="form-group">
+						 <input class="form-control form-control-lg" type="text" name="image" value="<%=blog["image"]%>">
+					  </div>
+					  <div class="form-group">
+						 <input class="form-control form-control-lg" type="text" name="title" value="<%=blog["title"]%>">
+					  </div>
+					  <div class="form-group">
+						 <input class="form-control form-control-lg" type="text" name="body" value="<%=blog["body"]%>">
+					  </div>
+						 <input class="form-control form-control-lg" type="submit" value="Submit">
+				 </form>
+			 </div>
+		 </div>
+	</div>
+
+<%- include("partials/footer"); -%>
