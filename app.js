@@ -15,7 +15,10 @@ app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 
 //database
-mongoose.connect("mongodb://localhost/blogDB", {useNewUrlParser: true, useUnifiedTopology: true} );
+
+var url = process.env.DATABASEURL || "mongodb://localhost/blogDB"
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true} );
+
 var blogSchema = new mongoose.Schema({"title": String, "image": String, "body": String,  "created": {"type": Date, "default": Date.now}});  
 var Blog = mongoose.model("Blog", blogSchema);
 
